@@ -16,7 +16,7 @@ class ListResults extends Component {
         API.search()
         .then(res => {
             console.log(res)
-            this.ListeningStateChangedEvent({
+            this.setState({
                 result: res.data.results.map((e, i) => ({
                     lastName: e.name.last,
                     firstName: e.name.first,
@@ -76,7 +76,7 @@ class ListResults extends Component {
                     </div>
                 </div>
 
-                <div className-="row">
+                <div className="row">
                 <div className ="col-md-6">
                     <SearchBar 
                     value={this.state.search}
